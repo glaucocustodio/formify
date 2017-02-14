@@ -11,20 +11,22 @@ module Formify
     class_methods do
       def main_model(main_model)
         @main_model = main_model.to_s.camelize
-
-        AttributesDelegator.delegate(
-          self,
-          Columns.names_for(self.get_main_model),
-          main_model_snaked
-        )
       end
 
       def get_main_model
-        @main_model ||= self.name.split("Form").first
+        @main_model ||= self.name.split("Form").first.singularize
       end
 
       def main_model_snaked
         get_main_model.underscore
+      end
+
+      def delegate_attributes
+        AttributesDelegator.delegate(
+          self,
+          Columns.names_for(get_main_model),
+          main_model_snaked
+        )
       end
     end
 
@@ -33,6 +35,8 @@ module Formify
     end
 
     included do
+      delegate_attributes
+
       if Object.const_defined?("ActiveModel::Model")
         include ActiveModel::Model
       else

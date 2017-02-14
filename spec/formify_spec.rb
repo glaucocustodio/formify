@@ -5,11 +5,15 @@ describe Formify do
     expect(Formify::VERSION).not_to be nil
   end
 
-  let(:model) { class SuperUser; end; SuperUser;  }
-  let(:form) { class SuperUserForm; end; SuperUserForm }
+  let!(:model) { class SuperUser; end; SuperUser }
+  let!(:form) { class SuperUserForm; end; SuperUserForm }
   let(:model_instance) { model.new }
   let(:form_included) { form.include(described_class) }
   let(:form_instance) { form_included.new(model_instance) }
+
+  before do
+    allow(model).to receive(:columns) { [] }
+  end
 
   describe ".new" do
     it "creates instance variable and attr_reader" do
