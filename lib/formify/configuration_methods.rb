@@ -37,7 +37,7 @@ module Formify
     included do
       delegate_attributes
 
-      if Object.const_defined?("ActiveModel::Model")
+      if ActiveModel.const_defined?("Model")
         include ActiveModel::Model
       else
         include ActiveModel::Validations
