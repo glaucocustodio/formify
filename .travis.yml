@@ -5,6 +5,7 @@ rvm:
   - 2.1.0
   - 2.2.0
   - 2.3.0
+  - 2.4.0
 
 env:
   - "RAILS_VERSION=3.1.0"
@@ -18,6 +19,8 @@ matrix:
     # Rails 5.x only supports 2.2+
     - rvm: 2.3.0
       env: RAILS_VERSION=master
+    - rvm: 2.3.0
+      env: RAILS_VERSION=5.1.4
     - rvm: 2.3.0
       env: RAILS_VERSION=5.0.0
     - rvm: 2.2.2

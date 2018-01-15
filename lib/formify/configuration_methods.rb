@@ -8,7 +8,7 @@ module Formify
   module ConfigurationMethods
     extend ActiveSupport::Concern
 
-    class_methods do
+    module ClassMethods
       def main_model(main_model)
         @main_model = main_model.to_s.camelize
       end
