@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Formify::Save do
   subject { Class.new { include Formify::Save }.new }
-  let(:model_instance) { double(:model_instance, to_s: :my_model) }
+  let(:model_instance) { double(:model_instance) }
 
   describe "#save" do
     before do
