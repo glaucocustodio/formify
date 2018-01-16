@@ -13,21 +13,21 @@ env:
 matrix:
   include:
     # Rails 5.x only supports 2.2+
-    - rvm: 2.4.0
-      env: RAILS_VERSION=master
+    - rvm: 2.2.2
+      env: RAILS_VERSION=5.0.0
     - rvm: 2.3.0
-      env: RAILS_VERSION=master
+      env: RAILS_VERSION=5.0.0
     - rvm: 2.3.0
       env: RAILS_VERSION=5.1.4
     - rvm: 2.3.0
-      env: RAILS_VERSION=5.0.0
-    - rvm: 2.2.2
-      env: RAILS_VERSION=5.0.0
+      env: RAILS_VERSION=master
+    - rvm: 2.4.0
+      env: RAILS_VERSION=master
 
 allow_failures:
-  - rvm: 2.4.0
-    env: RAILS_VERSION=master
   - rvm: 2.3.0
+    env: RAILS_VERSION=master
+  - rvm: 2.4.0
     env: RAILS_VERSION=master
 
 notifications:

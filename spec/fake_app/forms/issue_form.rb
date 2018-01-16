@@ -1,5 +1,5 @@
-# require 'formify'
+require 'formify'
 
-# class IssueForm
-#   include Formify
-# end
+class IssueForm
+  include Formify
+end
