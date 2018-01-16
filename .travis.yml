@@ -26,6 +26,8 @@ matrix:
 
 allow_failures:
   - rvm: 2.3.0
+    env: RAILS_VERSION=5.1.4
+  - rvm: 2.3.0
     env: RAILS_VERSION=master
   - rvm: 2.4.0
     env: RAILS_VERSION=master

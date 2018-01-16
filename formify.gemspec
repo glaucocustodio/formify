@@ -26,14 +26,14 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency 'activerecord', ">= 3.1"
-  spec.add_dependency 'activemodel', ">= 3.1"
-  spec.add_dependency 'activesupport', ">= 3.1"
+  spec.add_dependency 'activerecord', ">= 4.0"
+  spec.add_dependency 'activemodel', ">= 4.0"
+  spec.add_dependency 'activesupport', ">= 4.0"
 
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "rails", ">= 3.1"
+  spec.add_development_dependency "rails", ">= 4.0"
   spec.add_development_dependency "sqlite3"
   spec.add_development_dependency "awesome_print"
   spec.add_development_dependency "pry"

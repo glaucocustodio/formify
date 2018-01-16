@@ -18,6 +18,12 @@ Or install it yourself as:
 
     $ gem install formify
 
+## Supported versions
+- Ruby 2.1+
+- ActiveModel 4+
+- ActiveRecord 4+
+- ActiveSupport 4+
+
 ## Usage
 
 Given any model of your application:
