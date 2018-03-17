@@ -2,7 +2,9 @@
 
 A small gem that helps you creating form objects on ActiveRecord.
 
-## Installation
+**I stopped the development of this gem after finding out https://github.com/makandra/active_type.**
+
+## ~~Installation~~ Gem unreleased
 
 Add this line to your application's Gemfile:
 
